@@ -1,0 +1,69 @@
+﻿<Window x:Class="FirstWpfApplication.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWpfApplication"
+        mc:Ignorable="d"
+        Title="Window2" Height="650" Width="400">
+    <Window.Resources>
+        <Style TargetType="Label">
+
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <StackPanel>
+
+            <TextBox x:Name="txtnamevalue" ></TextBox>
+            <TextBlock x:Name="txtblock" Text="{Binding ElementName=txtnamevalue,Path=Text.Length}"></TextBlock>
+
+            <Label Content="User Name" Style="{StaticResource lblgraystyle}">
+            
+        </Label>
+            <Label Content="Welcome"></Label>
+            <TextBox x:Name="txtname">
+
+          
+        </TextBox>
+        <Label x:Name="pwd" Content="Password"></Label>
+        <PasswordBox x:Name="pwdbox"></PasswordBox>
+        <Label Content="Gen"></Label>
+            <RadioButton Background="{DynamicResource SolidAquamarine}">M</RadioButton>
+            <RadioButton Background="{DynamicResource SolidAquamarine}">F</RadioButton>
+        <Label Content="Skill"></Label>
+        <ComboBox>
+           
+            <ComboBoxItem Content="Net"></ComboBoxItem>
+            <ComboBoxItem Content="C#"></ComboBoxItem>
+            <ComboBoxItem Content="JAVA"></ComboBoxItem>
+            <ComboBoxItem Content="SQL SERVER"></ComboBoxItem>
+            <ComboBox.Style>
+                <Style>
+                    <Setter Property="ComboBox.Foreground" Value="Green"></Setter>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+        <Label Content="Location"></Label>
+        <ListBox >
+            <ListBoxItem>Bangalore</ListBoxItem>
+            <ListBoxItem>Chennai</ListBoxItem>
+            <ListBoxItem>Coimbatore</ListBoxItem>
+            <ListBoxItem>Trichy</ListBoxItem>
+        </ListBox>
+        <Label Content=" Dep"></Label>
+        <CheckBox> IT </CheckBox>
+        <CheckBox>Sales</CheckBox>
+        <CheckBox>Admin</CheckBox>
+        <CheckBox>Fina</CheckBox>
+        <Button Content="Register" Click="Button_Click"></Button>
+     
+    </StackPanel>
+    <StackPanel>
+        <Label Content="New lable"></Label>
+            <Label Content="New lable"></Label>
+            <Label Content="New lable"></Label>
+        </StackPanel>
+   </StackPanel>
+</Window>

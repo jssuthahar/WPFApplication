@@ -1,0 +1,33 @@
+﻿<Window x:Class="FirstWpfApplication.HotelReg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWpfApplication"
+        mc:Ignorable="d"
+        Title="HotelReg" Height="450" Width="800">
+    <ScrollViewer>
+    <StackPanel>
+        <Label Content="Name"></Label>
+        <TextBox x:Name="txtname"></TextBox>
+        <Label Content="Country"></Label>
+        <ComboBox x:Name="cmbcounty"></ComboBox>
+        <Label Content="State"></Label>
+        <ComboBox x:Name="cmbstate"></ComboBox>
+        <Label Content="Room Type"></Label>
+        <ListBox x:Name="lstroom"></ListBox>
+        <Label Content="Price">
+          
+        </Label>
+        <CheckBox x:Name="price1" Click="price1_Click"></CheckBox>
+            <CheckBox x:Name="price2" Checked="price1_Click" Unchecked="price1_Click"></CheckBox>
+            <CheckBox x:Name="price3" Click="price1_Click" Unchecked="price1_Click"></CheckBox>
+            <CheckBox x:Name="price4" Click="price1_Click" Unchecked="price1_Click"></CheckBox>
+        <Label Content="Booking State Date"></Label>
+        <DatePicker x:Name="dtpstatedate"></DatePicker>
+        <Label Content="Booking End Date"></Label>
+        <DatePicker x:Name="dtpendate"></DatePicker>
+        <Button Content="Register" x:Name="btnreg" Click="Button_Click"></Button>
+    </StackPanel>
+    </ScrollViewer>
+</Window>

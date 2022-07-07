@@ -1,0 +1,24 @@
+﻿<Window x:Class="FirstWpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWpfApplication"
+        mc:Ignorable="d"
+        Title="JSquare Training" Height="500" Width="542" Background="Green" >
+    <StackPanel Orientation="Vertical" Background="Aqua" x:Name="stack"  >
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="&lt;" Width="100" Height="100" Click="Button_Click"></Button>
+            <Button Content="Profile" Width="100" Height="100" Click="btnprofile_Click"></Button>
+            <Button Content="Home" Width="100" Height="100" Click="Button_Click_1" Margin="10"></Button>
+            <Button Content=">>" Width="100" Height="100" Click="Button_Click_2"></Button>
+            
+
+        </StackPanel>
+        <Frame x:Name="framain" NavigationUIVisibility="Hidden">
+            
+        </Frame>
+
+    </StackPanel>
+    
+</Window>

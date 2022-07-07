@@ -1,0 +1,61 @@
+﻿<Window x:Class="FirstWpfApplication.wpftrigger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWpfApplication"
+        mc:Ignorable="d"
+        Title="wpftrigger" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Text="Hi welcome">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Foreground" Value="#B666D2"></Setter>
+                    <Setter Property="FontSize" Value="30"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="Red"></Setter>
+                            <Setter Property="TextDecorations" Value="Underline"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Foreground" Value="Green"></Setter>
+                            <Setter Property="TextDecorations" Value="Underline"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+            
+        </TextBlock>
+
+        <CheckBox x:Name="chkstudent"  Content="Ary you student??"></CheckBox>
+        <TextBlock>
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Text" Value=""></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=chkstudent,Path=IsChecked}" Value="True">
+                            <Setter Property="Text" Value="Hi, are you from which college?"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox x:Name="txtdessc" ></TextBox>
+        <TextBlock>
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Text" Value=""></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=txtdessc,Path=Text.Length}" Value="30">
+                            <Setter Property="Text" Value="Only allowed 30 character"></Setter>
+                            <Setter Property="Background" Value="Red"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+
+    </StackPanel>
+</Window>

@@ -1,0 +1,80 @@
+﻿<Window x:Class="FirstWpfApplication.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWpfApplication"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="300" Width="250">
+    <StackPanel>
+
+
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Open"></MenuItem>
+                    <MenuItem Header="New Project"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edit">
+
+                    <MenuItem Header="Open"></MenuItem>
+                    <MenuItem Header="New Project"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="View">
+                    <MenuItem Header="Open"></MenuItem>
+                    <MenuItem Header="New Project"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Git">
+                    <MenuItem Header="Open">
+
+                        <MenuItem Header="Open"></MenuItem>
+                        <MenuItem Header="New Project"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="New Project"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Project">
+
+                    <MenuItem Header="Open"></MenuItem>
+                    <MenuItem Header="New Project"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+  
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+       
+       
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+
+            <TextBox x:Name="txtusername" Width="150" ></TextBox>
+            <Button Content="Checkuser" Click="Button_Click_2"></Button>
+        </StackPanel>
+        
+        <TextBox x:Name="txtage" Grid.Row="1"></TextBox>
+        <TextBox x:Name="txtedu" Grid.Row="2"></TextBox>
+        <Button Grid.Row="3" Content="Save" Click="Button_Click_1"></Button>
+        <Button Grid.Row="4" Content="Delete" Click="Button_Click_3"></Button>
+    </Grid>
+    <!--<WrapPanel>
+        <Button Content="1" Width="100" Margin="5,0,0,0"></Button>
+        <Button Content="2" Width="100"></Button>
+        <Button Content="3" Width="100"></Button>
+        <Button Content="2" Width="100"></Button>
+        <Button Content="3" Width="100"></Button>
+     
+        <Button Content="2"></Button>
+        <Button Content="3"></Button>
+    </WrapPanel>-->
+    <!--<Canvas>
+        <Button Content="11"  ></Button>
+        <Button Content="10" Canvas.Right="220" ></Button>
+  
+    </Canvas>-->
+    </StackPanel>
+</Window>
